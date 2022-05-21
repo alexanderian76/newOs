@@ -300,7 +300,7 @@ unsigned char status;
 
 }
 
-void MKeyHandler(struct interrupt_frame* frame) {
+__attribute__((interrupt)) void MKeyHandler(struct interrupt_frame* frame) {
   KeyboardInt_Handler();
 PIC_EndMaster();
     asm ("sti");
